@@ -5,8 +5,8 @@ dotenv.config();
 
 /**
  * Helper: append “@s.whatsapp.net” if the value looks like a plain number.
- * Accepts   "40784364650" ➜ "40784364650@s.whatsapp.net"
- * Leaves    "40784364650@s.whatsapp.net" as‑is.
+ * Accepts   "918731810311" ➜ "918731810311@s.whatsapp.net"
+ * Leaves    "918731810311@s.whatsapp.net" as‑is.
  */
 const toJid = v => /\d+$/.test(v) ? `${v}@s.whatsapp.net` : v.trim();
 
@@ -23,13 +23,13 @@ module.exports = {
   // ...other config...
 
   /* === IDs === */
-  ownerNumber : process.env.OWNER_NUMBER || '40736676892',
-  ownerIDs    : (process.env.OWNER_IDS  || '40736676892@s.whatsapp.net')
+  ownerNumber : process.env.OWNER_NUMBER || '918731810311',
+  ownerIDs    : (process.env.OWNER_IDS  || '918731810311@s.whatsapp.net')
                   .split(',')
                   .filter(Boolean)
                   .map(toJid),
 
-  mods        : (process.env.MODS || '40736676892')
+  mods        : (process.env.MODS || '918731810311')
                   .split(',')
                   .filter(Boolean)
                   .map(toJid),
@@ -38,7 +38,7 @@ module.exports = {
   economyGroups,
 
   /* === Bot identity === */
-  botName : process.env.BOT_NAME || '𝔐𝔦𝔨𝔞𝔰𝔞',
+  botName : process.env.BOT_NAME || 'ALONG',
   prefix  : process.env.PREFIX   || '.',
 
   /* === Groups & links === */
@@ -47,7 +47,7 @@ module.exports = {
                     || 'https://chat.whatsapp.com/FtGlFeNKIV0CyLPxlfjnmV',
 
   /* === Optional placeholders === */
-  phoneNumber : process.env.PHONE_NUMBER || '',
+  phoneNumber : process.env.PHONE_NUMBER || '918731810311',
 
   /* === Messages === */
   messages : {
